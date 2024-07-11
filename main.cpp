@@ -34,12 +34,12 @@ public:
         delete m_ptr;
     }
     
-    T operator*()
+    T& operator*()
     {
         return *m_ptr;
     }
 
-    T operator*() const
+    T& operator*() const
     {
         return *m_ptr;
     }
@@ -78,6 +78,10 @@ int main()
     std::cout<<*ptr<<std::endl;
 
     ptr = new int(100);
+
+    std::cout<<*ptr<<std::endl;
+
+    *ptr = 123;
 
     std::cout<<*ptr<<std::endl;
 
